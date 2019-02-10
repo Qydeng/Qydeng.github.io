@@ -26,7 +26,7 @@ article, aside, figure, footer, header, hgroup, nav, section {
   display:block;
 }
 
-body { display:flex;
+body { 
     flex-direction: column;
     height: 100%;
   font: normal .85em arial, sans-serif;
@@ -142,13 +142,7 @@ ol li {
   margin: 20px auto 0 auto;
 }
 
-header { header  /* 希望 header 采用固定的高度，只占用必须的空间 */
-   /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
-   flex: 0 0 auto;
-  width: 950px;
-  height: 105px;
- 
-}
+
 
 #logo { 
   width: 200px;
@@ -205,6 +199,7 @@ header { header  /* 希望 header 采用固定的高度，只占用必须的空间 */
 #content { 
   text-align: justify;
   width: 670px;
+  height:700px;
   padding: 20px 0 5px 0;
   margin: 0;
   float: right;
