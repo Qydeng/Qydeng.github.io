@@ -205,21 +205,11 @@ ol li {
   float: right;
 }
 
-#content ul, .sidebar ul { 
-  margin: 2px 0 5px 0px;
-}
 
-#content ul li, .sidebar ul li { 
-  list-style-type: none;
-  background: transparent url(../images/bullet.png) no-repeat left center;
-  margin: 0 0 0 0; 
-  padding: 2px 0 2px 28px;
-  line-height: 1.5em;
-}
 
-footer { footer  /* 和 header 一样，footer 也采用固定高度*/
-   /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
-  flex: 0 0 auto;
+footer {
+  position: absolute;
+  top:1800px;
   width: 950px;
   height: 90px;
   padding: 20px 0 5px 0;
