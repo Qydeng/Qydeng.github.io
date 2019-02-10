@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head> 
+<meta charset="UTF-8">
+<title>
+False Heaven
+</title>
+
+ <style>
+    
+body{background-image:url(illusion.jpg); 
+      background-size:100%;
+       background-repeat:no-repeat;
+       overflow:hidden;
+      }
+#deer{ position:absolute;z-index:2;opacity:0.7;}
+#test{position:absolute;top;100px;z-index:2;}
+#magician{position:absolute;top:100px;right:200px;z-index:3;opacity:0;}
+#message{position:absolute;top:100px;right:300px;z-index:4;}
+#butterfly1{ position:absolute;top:40px;left:300px;z-index:3;opacity:1;}
+#butterfly2{ position:absolute;top:450px;right:400px;z-index:3;opacity:1;}
+#butterfly3{ position:absolute;top:400px;left:170px;z-index:3;opacity:1;}
+#butterfly4{ position:absolute;top:150px;right:200px;z-index:3;opacity:1;}
+#butterfly5{ position:absolute;top:250px;right:500px;z-index:3;opacity:1;}
+#truedeer{ position:absolute;top:0px;left:0px;z-index:4;opacity:0.4;}
+#deerwords { position:absolute;top:100px;left:450px;z-index:5;display:none;}
+
+</style>
+<script>
+var x= Math.floor((Math.random() * 750) + 5);
+var y= Math.floor((Math.random() * 450) + 5);
+
+function deerun(){ document.getElementById("deer").style.display="none";setTimeout(deershow,500);document.getElementById("deer").style.left=x + 15+"px";
+
+document.getElementById("deer").style.top= y + 15+"px";x= Math.floor((Math.random() * 750) + 5);
+   y= Math.floor((Math.random() * 450) + 5);}
+
+function deershow(){ document.getElementById("deer").style.display="block";}
+function showmagic(){ document.getElementById("magician").style.opacity=1;}
+function hidemagic(){ document.getElementById("magician").style.opacity=0;}
+function hidemessage(){document.getElementById("message").style.display="none";}
+
+function butterfly1(){ document.getElementById("butterfly1").style.opacity=0;setTimeout(showfly1,2000);setTimeout(butterfly1,4000);}
+function butterfly2(){ document.getElementById("butterfly2").style.opacity=0;setTimeout(showfly2,1000);setTimeout(butterfly2,2000);}
+function butterfly3(){ document.getElementById("butterfly3").style.opacity=0;setTimeout(showfly3,2600);setTimeout(butterfly3,3500);}
+function butterfly4(){ document.getElementById("butterfly4").style.opacity=0;setTimeout(showfly4,1500);setTimeout(butterfly4,3000);}
+function butterfly5(){ document.getElementById("butterfly5").style.opacity=0;setTimeout(showfly5,1500);setTimeout(butterfly5,4500);}
+
+function showfly1(){document.getElementById("butterfly1").style.opacity=1;}
+function showfly2(){document.getElementById("butterfly2").style.opacity=1;}
+function showfly3(){document.getElementById("butterfly3").style.opacity=1;}
+function showfly4(){document.getElementById("butterfly4").style.opacity=1;}
+function showfly5(){document.getElementById("butterfly5").style.opacity=1;}
+
+function showadeer(){document.getElementById("truedeer").style.opacity=1;document.getElementById("deerwords").style.display="block";}
+
+
+function flashfly(){ butterfly1();butterfly2();butterfly3();butterfly4();butterfly5();setTimeout(hidemessage,9000);}
+</script>
+</head>
+<body onload="flashfly()";>
+<div id="deer"> <a href="index.html"><img onmouseover="deerun()"  src="deer.png" width="170" height="200"></a></div>
+ <a href="stage3.html"> <img id="truedeer" onmouseover="showadeer()" img src="truedeer.png" width="70" height="80" ></a> 
+<img id="deerwords" img src="deerwords.png" width="650" height="400">
+<div id="magician"><img onmouseover="showmagic()" onmouseout="hidemagic()" src="magician.png" width="250" height="370"></div>
+<div id="message"><img src="stage2message.png" width="570" height="470"></div>
+<div id="butterfly1"><img src="butterfly1.png" width="100" height="100"></div>
+<div id="butterfly2"><img src="butterfly2.png" width="100" height="100"></div>
+<div id="butterfly3"><img src="butterfly3.png" width="100" height="100"></div>
+<div id="butterfly4"><img src="butterfly4.png" width="100" height="100"></div>
+<div id="butterfly5"><img src="butterfly5.png" width="100" height="100"></div>
+</body>
+</html>

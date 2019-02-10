@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head> 
+<meta charset="UTF-8">
+<title>
+Special One
+</title>
+
+ <style>
+    
+body{background-image:url(palace2.png); 
+      background-size:100%;
+       background-repeat:no-repeat;
+      overflow:hidden;
+      }
+
+#text{   position:absolute;
+        top:100px;
+       left:500px;
+       opacity:1;
+       z-index:3; 
+     font-size:30px;
+    }                       
+
+#text1{   position:absolute;
+        top:300px;
+       left:870px;
+       opacity:1;
+       z-index:4; 
+     
+   }     
+
+#text2{   position:absolute;
+        top:50px;
+       left:460px;
+       opacity:1;
+       z-index:3; 
+     font-size:30px;
+    color:pink;}      
+
+#text3{   position:absolute;
+        top:550px;
+       right:100px;
+       opacity:1;
+       z-index:3; 
+     font-size:30px;
+    color:blue;}                         
+                   
+#text4{   position:absolute;
+        top:600px;
+       left:70px;
+       opacity:1;
+       z-index:3; 
+     font-size:30px;
+    color:green;
+     }   
+
+#masterwords{ position:absolute;
+            top:80px;
+             left:300px;
+             background-color:blue;
+               opacity:0.8;
+             z-index:6;
+              font-size:20px;
+             color:white;
+              width:500px;
+               height:300px;
+                padding-left:20px;
+                 padding-right:20px;
+                  padding-top:20px;
+                   display:none;}
+               
+                   
+#button1{ background-color: grey; 
+   
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+     cursor: pointer;
+    font-size: 16px;
+    position:absolute;
+    top:180px;
+    left:30%; z-index:4; 
+     display:none;   
+    } 
+#button2{ background-color: yellow; 
+   
+    color: blue;
+    padding: 10px 10px;
+    text-align: center;
+  cursor: pointer;
+
+    font-size: 32px;
+    position:absolute;
+    top:160px;
+    left:40%; z-index:4;
+     display:none;     
+    }
+#button3{ background-color: yellow; 
+    
+    color: blue;
+    padding: 10px 10px;
+    text-align: center;
+   cursor: pointer;
+    display: none;
+    font-size: 16px;
+    position:absolute;
+    top:350px;
+    left:500px; z-index:7;
+    }
+
+
+#unfollow{position:absolute;
+           left:5%;
+            top:6% ;
+             display:none;z-index:6;}
+#you{position:absolute;
+      right:20px;top:300px;z-index:5;opacity:0.7;}
+
+
+#master{ position: absolute; left:0px; top:0px;opacity:0;display:block;z-index:5;}
+
+#gift{  position:absolute;
+        top:70px;
+       right:0%;
+       opacity:0.7;
+       z-index:5; 
+     font-size:27px;
+    background-color:yellow;
+    width:280px;height:150px;} 
+#addseed{ position:absolute;
+            top:200px;
+             right:40%; z-index:6;font-size:30px;display:none;}
+#bottle{  position:absolute;
+        top:100px;
+       right:1%;
+       opacity:0.9;
+       z-index:5; }
+</style>
+
+<script>
+function flashtext(){  setTimeout(off,2000);
+                               setTimeout(on,4000); setTimeout(flashtext,6000);}
+                                
+                  
+
+function endflash(){document.getElementById("text").style.display="none";  
+document.getElementById("text1").style.display="none";  document.getElementById("master").style.display="none";  
+document.getElementById("text2").style.display="none";  
+document.getElementById("text3").style.display="none";                      
+document.getElementById("text4").style.display="none"; 
+document.getElementById("unfollow").style.display="block";  
+document.getElementById("gift").innerHTML="Oops! all your gifts are gone now"; 
+setTimeout('window.location.replace("stage4.html")',6000); }
+
+
+
+
+function off(){document.getElementById("text").style.visibility=" hidden";document.getElementById("text1").style.visibility=" visible";
+           document.getElementById("text2").style.visibility=" hidden";document.getElementById("text3").style.visibility=" visible";
+document.getElementById("text4").style.visibility=" hidden";
+}
+function on(){  document.getElementById("text").style.visibility=" visible"; document.getElementById("text1").style.visibility=" hidden";
+
+document.getElementById("text2").style.visibility=" visible";document.getElementById("text3").style.visibility=" hidden";document.getElementById("text4").style.visibility=" visible";
+
+}  
+
+var m=0;var opacity=0;
+
+function appear(){ 
+if(m<=7){opacity=opacity+ 0.1;document.getElementById("master").style.opacity = opacity;m++; 
+                  setTimeout(appear, 500);    }
+else{ typeWriter();  document.getElementById("masterwords").style.display="block";}
+
+}
+
+function showbuttons(){ document.getElementById("button1").style.display="block"; document.getElementById("button2").style.display="block"; 
+                       document.getElementById("masterwords").style.display="none";document.getElementById("button3").style.display="none";}
+var originalx=500;
+var originalx1=870;
+var originaly2=400;
+var originaly=50;
+var originaly1=600;
+function textmove(){ if (originalx<=900) {originalx=originalx+20;document.getElementById("text").style.left=originalx +"px";}
+                        else{ originalx=450; document.getElementById("text").style.left=originalx +"px";}
+                   }    
+function text1move(){ if (originalx1>=380) {originalx1=originalx1-20;document.getElementById("text1").style.left=originalx1 + "px";}
+                        else{ originalx1=950; document.getElementById("text1").style.left=originalx1+"px";}
+                   }        
+function text2move(){ if (originaly<=550) {originaly=originaly+20;document.getElementById("text2").style.top=originaly+"px";}
+                        else{ originaly=50; document.getElementById("text2").style.top=originaly +"px";}
+                   }
+function text3move(){ if (originaly2>=280) {originaly2=originaly2-15;document.getElementById("text3").style.top=originaly2+"px";}
+                        else{ originaly2=550; document.getElementById("text3").style.top=originaly2 +"px"; 
+                               document.getElementById("text3").style.left="50px";}
+                   }        
+function text4move(){ if (originaly1>=400) {originaly1=originaly1-20;document.getElementById("text4").style.top=originaly1+"px";}
+                        else{ originaly1=550; document.getElementById("text4").style.top=originaly1 +"px"; 
+                              document.getElementById("text4").style.left="800px";}    
+                    }
+function moving(){ setInterval(textmove,500);setInterval(text1move,500); setInterval(text2move,500);setInterval(text3move,500);setInterval(text4move,500);setTimeout(appear,3000);}
+
+
+
+
+var text = "  I am the Administrator here, and I only show my face to the chosen ones like you. " + 
+                "      Here is a very special place, only for special ones like you. " + 
+           
+         "In the previous stage, one may think he is playing a game, but in fact he is playing the role I have designed for him." + 
+             
+            "Now, you are no longer limited by the seeds. All you need to do, is follwing me, then you will get as many seeds as you want," + " that is my gift for you. ";
+          
+var i = 0;
+
+
+function typeWriter() { 
+  if (i < text.length) {
+    document.getElementById("masterwords").innerHTML += text.charAt(i);
+ 
+    i++;
+  
+    setTimeout(typeWriter, 35);
+  }
+  else{ document.getElementById("button3").style.display="block";}
+}
+var yourheight=300;var yourwidth=240;var masterheight=320;var masterwidth=280;
+function changesize(){ if (yourheight >0){yourheight=yourheight-29; document.getElementById("you").style.height=yourheight+ "px";
+                      yourwidth=yourwidth-22; document.getElementById("you").style.width=yourwidth+ "px";
+                      masterheight=masterheight+25; document.getElementById("master").style.height=masterheight+ "px";
+                      masterwidth=masterwidth+20; document.getElementById("master").style.width=masterwidth+ "px";}
+                      else{ document.getElementById("masterwords").innerHTML = " Thank you for empowing me. This turn is over.Let us start again!. " ;
+                            document.getElementById("masterwords").style.display = " block" ;setTimeout('window.location.replace("stage3.html")',5000); }
+                      
+                }
+
+
+function randomchoice(){ var number = Math.floor((Math.random() * 7) + 1);
+                           var item=""; 
+                         if (number==1 ) { item="a Palace";}
+                         else if ( number==2) { item="a Diamond Watch";}
+                          else if( number==3) { item=" the Magic Wand";} 
+                          else if( number==4 ) { item="a Spacecraft";} 
+                         else if ( number==5) { item="the Army";}
+                           else if ( number==6) { item="a Crown";}
+                             else if ( number==7) { item=" the Finest Wine";}
+                          
+                          
+                          return item; }
+
+ var countseed= 0;
+function follow(){ document.getElementById("addseed").style.display="block";setTimeout(hideseed,1000);countseed++;var total=countseed*5000;
+                   document.getElementById("gift").innerHTML="Your total seeds: "+ total + " and extra gift: " +  randomchoice() + " is added !";}     
+function hideseed(){ document.getElementById("addseed").style.display="none";}
+                
+function playmusic(){ document.getElementById("music").play();}
+
+</script>
+</head>
+<body onload="moving()">
+
+
+<audio id ="music" >
+    <source src="warn.wav" type="audio/wav">
+  Your browser does not support the audio element.
+
+</audio>
+
+
+
+
+<div id="text"><img src="text.png" height="100" width="300"></div>
+<div id="text1"><img src="try0.png" height="100" width="300"></div>
+<div id="text2"> <img src="text1.png" height="100" width="300"></div>
+<div id="text3"><img src="text3.png" height="100" width="300"></div>
+<div id="text4"><img src="text4.png" height="100" width="300"></div>
+<img id="master" img src="master00.png" height="320" width="280">
+<div id="masterwords"> </div>
+<div id="gift"></div>
+
+<button id="button1" button onclick="endflash();playmusic()"> unfollow</button></div>
+<button id="button2" button onclick="changesize();follow()"> follow</button></div>
+<button id="button3" button onclick="showbuttons()"> I get it</button></div>
+
+<div id="unfollow"><img src="unfollow.png"alt="message" height="500" width="750"> </div>
+<img id="you" img src="you.png"alt="you" height="300" width="240"> 
+<div id="addseed"> + 5000 seeds</div>
+</body>
+</html>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

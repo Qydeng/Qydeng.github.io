@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head> 
+<meta charset="UTF-8">
+<title>
+Secret of Grail
+</title>
+
+ <style>
+    
+body{background-image:url(secret1.png); 
+      background-size:100%;
+       background-repeat:no-repeat;
+       overflow:hidden;
+      }
+#darkness{ position:absolute;
+           left:50px;
+            top:3%;
+            right:50px;
+             width:auto;
+            
+             opacity:1;
+            z-index:3; }
+
+#grail{ position:absolute;
+        top:450px;
+       left:570px;
+       opacity:0;
+       z-index:7; }   
+
+#button{ background-color: white; 
+    border: none;
+    color: white;
+    padding: 1px 1px;
+    text-align: center;
+    text-decoration: none;
+    display: none;
+    font-size: 16px;
+    position:absolute;
+    top:200px;
+    left:60%; z-index:4;     
+    } 
+
+
+#text{   position:absolute;
+        top:100px;
+       left:100px;
+       opacity:1;
+       z-index:5; 
+     font-size:20px;
+    color:white;}                       
+
+#text1{   position:absolute;
+        top:300px;
+       left:400px;
+       opacity:1;
+       z-index:5; 
+     font-size:20px;
+    color:white;display:none;}     
+
+#text2{   position:absolute;display:none;
+        top:350px;
+       left:400px;
+       opacity:1;
+       z-index:5; 
+     font-size:20px;
+    color:white;}      
+
+#text3{   position:absolute;display:none;
+        top:220px;
+       left:800px;
+       opacity:1;
+       z-index:5; 
+     font-size:20px;
+    color:white;}                         
+                   
+#text4{   position:absolute;display:none;
+        top:450px;
+       left:40px;
+       opacity:1;
+       z-index:5; 
+     font-size:20px;
+    color:white;}    
+
+
+
+#text5{   position:absolute;display:none;
+        top:500px;
+       right:40px;
+       opacity:1;
+       z-index:5; 
+     font-size:20px;
+    color:white;}  
+#text6{   position:absolute;display:none;
+        top:530px;
+       right:400px;
+       opacity:1;
+       z-index:5; 
+     font-size:20px;
+    color:white;}                         
+                                           
+                                        
+                   
+#button1{ 
+    display: none;
+    font-size: 16px;
+    position:absolute;
+    top:200px;
+    left:30%; z-index:6;     
+    } 
+
+#you{ position:absolute;left:560px;top:200px;z-index:3;}
+#trueself{position:absolute;
+        top:290px;
+       left:300px;
+       opacity:0.1;
+       z-index:2; }
+#final{position:absolute;
+        top:20px;
+       left:70px;
+        z-index:5;display:none; }
+#conclusion { position:absolute;
+        top:250px;
+       left:240px;
+        z-index:5;
+         color:white; 
+         font-size:14px; 
+          display:none;   }
+#reminder{ position:absolute;
+        top:250px;
+       left:240px;
+        z-index:3;
+         color:white; 
+         font-size:14px; 
+          display:none;}
+</style>
+
+
+<script>
+
+var originalx = 500;   originaly = 200;
+function moveadiv(div2move,wheremov) {
+    
+    
+    var adiv = document.getElementById(div2move);  
+   
+    var direction = wheremov;	
+
+  
+	
+	if (direction == "left") {    
+        originalx = originalx - 6;      
+    } else if (direction == "right") {
+		originalx = originalx + 6;
+    } else if (direction == "up") {
+		originaly = originaly - 6;
+    } else if (direction == "down") {
+		originaly = originaly + 6;
+    } 
+    
+    
+	
+	adiv.style.left = originalx + "px";
+	adiv.style.top = originaly + "px";
+		
+
+	
+
+}
+	
+
+
+
+function keyStuff(event) {
+
+   var x = event.charCode || event.keyCode;  
+   var y = String.fromCharCode(x);  
+   
+ if (x == 97) {     moveadiv('you','left');}
+	
+   else if (x == 100) {  
+       moveadiv('you','right');
+       
+   } 
+       
+    else if (x == 119) { // w
+       moveadiv('you','up');
+       
+   } 
+   else if (x == 115) { // s
+       moveadiv('you','down');
+       
+   } 
+     else { 
+       alert("Sorry You are not allowed to move this way!");
+   }
+
+if (originalx >1150 || originalx<80) {
+	 originalx = 500;setTimeout(warn,300);
+}	 
+if (originaly > 500 || originaly<40) {
+	 originaly = 200; setTimeout(warn,300);
+}
+
+
+if (originalx < 400 ){ document.getElementById("reminder").style.display="block";
+}
+                                        
+
+if (originaly >= 488 && originalx<=89) {
+document.getElementById("button").style.display="block";}	 
+
+if (originaly >= 410 && originaly<=500){ 
+
+                      if(originalx>=572 && originalx<=590) {
+               
+                       var check= selfappear();
+                          if (check=="true"){  alert("amazing, you made it !");integration();}
+
+                    }
+}
+function warn(){ alert(" Rebound! This is the wall of darkness");}
+
+}
+var m=1;var opacity=1;var speed=700; 
+function lighter(){ 
+if(m<=10){opacity=opacity-0.1;document.getElementById("darkness").style.opacity = opacity;m++; 
+                  setTimeout(lighter, speed);    }
+else{ document.getElementById("darkness").style.display="none"; document.getElementById("trueself").style.opacity=1;  }
+}
+
+var appear="";
+function selfappear() { var degree=document.getElementById("trueself").style.opacity; // when opacity is 1, move #you to the area will trigger the appear of grail.
+                       if (degree== 1) { appear="true";}
+                        else {appear="false";}
+                          return appear; }
+function integration(){ document.getElementById("trueself").style.opacity=0.1;document.getElementById("you").style.opacity=0.1;
+                         flashgrail();setTimeout(showfinal,2000);}
+
+function flashgrail(){ document.getElementById("grail").style.opacity=0.9;setTimeout(hidegrail,1500);setTimeout(flashgrail,3000);}
+function hidegrail(){ document.getElementById("grail").style.opacity=0.3;}
+
+function show1(){document.getElementById("text1").style.display="block";}
+function show2(){document.getElementById("text2").style.display="block";}
+function show3(){document.getElementById("text3").style.display="block";}
+function show4(){document.getElementById("text4").style.display="block";}
+function show5(){document.getElementById("text5").style.display="block";}
+function show6(){document.getElementById("text6").style.display="block";}
+function hide() { document.getElementById("text1").style.display="none";document.getElementById("text2").style.display="none";
+                  document.getElementById("text3").style.display="none";document.getElementById("text4").style.display="none";document.getElementById("text5").style.display="none";
+                 document.getElementById("text6").style.display="none";  document.getElementById("text").style.display="none";
+               }
+
+function textshow() {  
+                        setTimeout(show1,2000);setTimeout(show2,4000);setTimeout(show3,6000);setTimeout(show4,8000);setTimeout(show5,10000);setTimeout(show6,12000);
+
+                        setTimeout(hide,17000);
+                      } 
+function showfinal(){ document.getElementById("final").style.display="block";document.getElementById("conclusion").style.display="block";}
+
+function stopvoice(){document.getElementById("music").pause();}
+</script>
+</head>
+<body onload="textshow()";>
+<body onkeypress="keyStuff(event);">
+
+<audio id ="music" autoplay loop>
+    <source src="stage4.wav" type="audio/wav">
+  Your browser does not support the audio element.
+
+</audio>
+
+<div id="text"> Greetings from darkness...</div>
+<div id="text1"> You are very unlucky to be here</div>
+<div id="text2"> But it could also be lucky</div>
+<div id="text3"> It depends on,<br> whether you can find the legendary Grail</div>
+<div id="text4"> They talk about it all the time, <br>They said it would light up the sky</div>
+<div id="text5"> but nobody has ever found it</div>
+<div id="text6"> Wanna have a shot? press the ASDW key to make movement</div>
+<div id="button"> <button onclick="lighter();stopvoice();"> turn on</button></div>
+<div id="trueself"><img src="trueself1.png"  width="420" height="340"></div>
+<div id="darkness"> <img src="darkness.png" ></div>
+<div id="final"> <img src="final.png" width="1100" height="560"></div>
+<div id="you"> <img src="youhere.png"  width="100" height="100"> </div>
+<div id="grail"><img src="grail.png" width="100" height="100"></div>
+<div id="reminder">Success is just around the corner</div>
+<div id="conclusion"> Once upon a time, there were 12 pillars of the sea, but a wind from the north removed two, and they tell us: We always have 10.<br>
+                    Once upon a time, there was a beautiful island with eternal sunshine, but a billow from the sea submerged it, and they tell us: It never exists.<br>
+                  When the scrolls are re-wrote, when the memories are lost in the dust, when the tree of wisdom turns into unquestionable dogma,<br>
+                     our souls are all wandering in the darkness, with our spirit seperated, as the result of the mistaken seed.<br>
+                       But the pure water of the grail is always here, not for someone special, but for anynone who is willing to drink from it<br>
+                      but only for these who choose to see it.</div>
+
+</body>
+</html>
+    
