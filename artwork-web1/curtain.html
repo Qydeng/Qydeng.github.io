@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>
+Behind the Curtain
+</title>
+
+ <style>
+
+
+body{background-image:url(curtain0.png); 
+      background-size:25%;
+      background-repeat: repeat;
+
+      }
+
+.block{ position: absolute;
+	        top: 10%;
+	        left: 20%;
+                right:20%;
+           background-color: grey;
+           width: auto ;
+           height: 430px;
+           z-index:2;
+           opacity:0.9;filter: alpha(opacity=90);
+        
+           }
+#earth {  position: absolute;
+	 margin-top: 15%; 
+             margin-left: 58%; 
+           opacity:0.6; filter: alpha(opacity=0);
+           z-index:3;
+          
+           }
+
+#hand2{
+        position:absolute;
+   	
+       transform: rotate(2deg);
+        z-index:2;
+         margin-top:14%;
+          margin-left: 0;
+         opacity:0; filter: alpha(opacity=0);
+           
+       }
+#hand2:hover{ opacity:0.7;filter: alpha(opacity=70);}
+
+#hand1 {  position: absolute;
+	     
+             margin-left: 60%; 
+           opacity:0; filter: alpha(opacity=0);
+           z-index:2;
+          
+           }
+#hand1:hover{ opacity:0.7; filter: alpha(opacity=70);}
+
+#swords{ position: absolute;
+           left:43%;
+            top:300px;
+            opacity:0;filter: alpha(opacity=0);
+            z-index:2;}
+
+#swords:hover{ opacity:1;filter: alpha(opacity=100);}
+
+.question{ position: absolute;
+        top:500px;
+        left:47.5%; 
+      width:70px;
+    height:700px;
+    background-image:url(wenhao.png);
+    background-repeat: repeat;
+    
+
+      }
+
+#eyes{ position:absolute;
+        top: 1550px;
+        left:40%;
+       z-index:1;
+       opacity:0;filter: alpha(opacity=0);
+        }
+
+#eyes:hover{ opacity:1;filter: alpha(opacity=100);}
+
+#text1 {  position: fixed;
+	     top:400px;
+             left: 45%; 
+             color:white;
+              font-size: 30px;
+              font-family:vernada, arial;
+             z-index:2;
+             
+
+                }
+
+
+
+
+#text2{ position: absolute;
+	     top:12%;
+             left: 22%; 
+             color:white;
+              font-size: 17px;
+              font-family:vernada, arial;
+            
+               z-index:2;
+             }
+
+a:link {color: white;text-decoration: none;}
+a:visited {color: white; text-decoration: none;}
+a:focus {color: yellow;text-decoration: none;}
+a:hover {color: blue;text-decoration: none;}
+a:active {color: blue;text-decoration: none;}
+
+
+.textcontainer1{ position: absolute; 
+        top:820px;
+        left:0%; 
+         background-color: #9d94f3;
+          
+         font-size:30px;    
+          color:#bdf8ff;
+          opacity:0.6;filter: alpha(opacity=60);
+          }
+
+.textcontainer2{ position: absolute; 
+        top:820px;
+        right:0%; 
+         background-color: #9d94f3;
+         font-size:30px;    
+          color:#bdf8ff;
+          opacity:0.6;filter: alpha(opacity=60);
+          }
+
+#text3 {  position: absolute;
+	     top:1400px;
+             left: 43%; 
+             color:white;
+              font-size: 20px;
+             font-family:vernada, arial;
+             z-index:2;
+             
+
+                }
+
+
+
+
+#img{ position: absolute; 
+        top:950px;
+        right:0%; 
+       opacity:0.95;
+       }
+
+#imgleft{ position: absolute; 
+        top:950px;
+        left:0%; 
+       transform: rotateY(180deg);
+         opacity:0.95;
+       }                                                    
+
+</style></head>
+<body>
+<div id= "text2"> Behind the Curtain </div>
+<div id= "text1"> <a href="where.html">What You Don't See? </a></div>
+
+<div class="block"><div id="hand1"><img src="hand1.png" alt="hiden hand" height="250" width="320"></div>
+<div id="hand2"><img src="hand2.png" alt="hiden hand" height="280" width="280"></div>
+<div id="earth"><img src="earth.png" alt="earth" height="80" width="80"></div>
+</div>
+<div id="swords"><img src="swords.png" alt="swords" height="200" width="180"></div>
+
+<div class="question"><img src="wenhao.png" alt="question" height="100" width="70"></div>
+
+<div class= "textcontainer1">What Can You See ? </div>
+<div class= "textcontainer2">What Can You See ? </div>
+<div id= "text3"> What They Cannot Say? </div>
+
+
+<div id="img"><img src="content.png" alt="content" height="400" width="400"></div>
+<div id="imgleft"><img src="content.png" alt="content" height="400" width="400"></div>
+
+<div id="eyes"> <img src="eyes.png" alt="eye"  height="140" width="240"> </div>
+
+
+</body>
+</html>
