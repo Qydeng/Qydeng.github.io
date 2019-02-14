@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -6,7 +6,7 @@
  
 <style>
 
-body{background-image:url(images/bg.png); 
+body{background-image:url(images/ocean.png); 
       background-size:100%;
     
                                     }
@@ -17,47 +17,20 @@ a:focus {color:white; text-decoration: none;}
 a:hover {color: black; text-decoration: none;}
 a:active {color: green; text-decoration: none;} 
 
-#work{ position:absolute;
+#work1{ position:absolute;
         top: 100px;
         left:100px;
        z-index:4;
        
                          }
-#content{ position: absolute;
-	        top: 0px;
-	        left: 70px;
-           background-color: #607713;
-          width: 1000px;
-           height: 600px;
-        
-           border-color : yellow; 
-         border-left-style: solid;
-	border-right-style: solid;
-         z-index:0;
-         opacity:0.6;filter: alpha(opacity=60);
-
-                            }
-#text{ position:absolute;
+#work2{ position:absolute;
         top: 100px;
-        left:500px;
-       z-index:3;
-    color: yellow;
-       }
+        right:100px;
+       z-index:2;
+       
+                         }
 
-#buttonext{ background-color:blue; 
-    
-    color: white;
-     padding: 10px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    position:absolute;
-    top:350px;
-    left:1000px;
-   cursor: pointer;
-      z-index:3;
-    }
+
 #buttonlast{ background-color:#40E0D0; 
     
     color: #00008B;
@@ -66,8 +39,8 @@ a:active {color: green; text-decoration: none;}
     text-decoration: none;
     display: inline-block;
     font-size: 12px;
-    position:absolute;
-    top:400px;
+    position:fixed;
+    top:450px;
     left:1000px;
    cursor: pointer;
       z-index:3;
@@ -80,8 +53,8 @@ a:active {color: green; text-decoration: none;}
     text-decoration: none;
     display: inline-block;
     font-size: 12px;
-    position:absolute;
-    top:450px;
+    position:fixed;
+    top:500px;
     left:1000px;
    cursor: pointer;
       z-index:3;
@@ -91,10 +64,12 @@ a:active {color: green; text-decoration: none;}
 
 </head>
 <body>
-<div id="content"></div> <div id="text"> The robotic beings <br>It is composed of two photos original took by me <br>
-                and I modified them by Photohop</div>
 
-<div id="work"> <img src="images/robot.png"  alt="robot"  width="945" height="723">
+
+<div id="work1"> <img src="images/hand.jpg"  alt="elf"  width="391" height="318"></div>
+
+<div id="work2"> <img src="images/hand1.jpg"  alt="elf"  width="400" height="369"></div>
+
 </div>
 <button id="buttonext" button onclick='window.location.replace("index.html")'>Next</button>
 <button id="buttonlast" button onclick='window.location.replace("index.html")'>Last</button>
