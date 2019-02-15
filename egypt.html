@@ -32,7 +32,7 @@ a:active {color: green; text-decoration: none;}
                          }
 
 #worksky{ position:absolute;
-        top: 650px;
+        top: 750px;
         left: 300px;
        z-index:4;
        
@@ -44,11 +44,18 @@ a:active {color: green; text-decoration: none;}
        
                          }
 #workgod{ position:absolute;
+        top: 3050px;
+        left:700px;
+       z-index:4;
+       
+                         }
+#workinside{ position:absolute;
         top: 2750px;
         left:700px;
        z-index:4;
        
                          }
+
 
 #content{ position: absolute;
 	        top: 80px;
@@ -69,7 +76,7 @@ a:active {color: green; text-decoration: none;}
 	        left: 70px;
            background-color: #28f0f7ab;
           width: 1050px;
-           height: 1100px;
+           height: 2000px;
         
            border-color : yellow; 
          border-left-style: solid;
@@ -78,22 +85,9 @@ a:active {color: green; text-decoration: none;}
          opacity:0.6;filter: alpha(opacity=60);
 
                             }
+
 #content2{ position: absolute;
-	        top: 2000px;
-	        left: 70px;
-           background-color: #28f0f7ab;
-          width: 1050px;
-           height: 600px;
-        
-           border-color : yellow; 
-         border-left-style: solid;
-	border-right-style: solid;
-         z-index:0;
-         opacity:0.6;filter: alpha(opacity=60);
-
-                            }
-#content3{ position: absolute;
-	        top: 2700px;
+	        top: 2900px;
 	        left: 70px;
            background-color: #28f0f7ab;
           width: 1050px;
@@ -116,21 +110,8 @@ a:active {color: green; text-decoration: none;}
     color: yellow;
        }
 
-#buttonext{ background-color:blue; 
-    
-    color: white;
-     padding: 10px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    position:absolute;
-    top:350px;
-    left:1000px;
-   cursor: pointer;
-      z-index:3;
-    }
-#buttonlast{ background-color:#40E0D0; 
+
+#buttonNext{ background-color:#40E0D0; 
     
     color: #00008B;
      padding: 10px 10px;
@@ -138,7 +119,7 @@ a:active {color: green; text-decoration: none;}
     text-decoration: none;
     display: inline-block;
     font-size: 12px;
-    position:absolute;
+    position:fixed;
     top:400px;
     left:1000px;
    cursor: pointer;
@@ -152,7 +133,7 @@ a:active {color: green; text-decoration: none;}
     text-decoration: none;
     display: inline-block;
     font-size: 12px;
-    position:absolute;
+    position:fixed;
     top:450px;
     left:1000px;
    cursor: pointer;
@@ -167,15 +148,16 @@ a:active {color: green; text-decoration: none;}
                 and I modified them by Photohop</div>
 <div id="content1"></div>
 <div id="content2"></div>
-<div id="content3"></div>
+
 
 <div id="work"> <img src="images/pyramid.png"  alt="pyramid"  width="567" height="410"></div>
-<div id="work1"> <img src="images/pyramidinside.png"  alt="inside"  width="250" height="300"></div>
+
 <div id="worksky"> <img src="images/sky.png"  alt="sky"  width="611" height="1100">
 </div>
-<div id="worklion"> <img src="images/lions.png"  alt="lion"  width="529" height="529"></div>
-<button id="buttonext" button onclick='window.location.replace("index.html")'>Next</button>
-<button id="buttonlast" button onclick='window.location.replace("index.html")'>Last</button>
+<div id="worklion"> <img src="images/lions.png"  alt="lion"  width="480" height="480"></div>
+<div id="workinside"> <img src="images/pyramidinside.png"  alt="inside"  width="397" height="347"></div>
+
+<button id="buttonNext" button onclick='window.location.replace("parellelworld.html")'>Next</button>
 <button id="buttonhome" button onclick='window.location.replace("index.html")'>Back to Index</button>
 </body>
 </html>
