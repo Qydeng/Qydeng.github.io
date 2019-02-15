@@ -41,12 +41,20 @@ p {
   color:black;
   
 }
+
+  
+table td { height: 40px;
+  background: #DDD;
+  color: #47433F;
+  border-top: 1px solid #FFF;
+}
+
 table {
   font-family: arial, sans-serif;
-  border-collapse: collapse;
   width: 100%;
 }
-th {
+th {  padding: 7px 4px;
+  height: 20px;
   background-color: #4CAF50;
   color: white;
 }
@@ -306,22 +314,6 @@ footer a, footer a:hover {
   background: none;
 }
 
-table { 
-  margin: 10px 0 30px 0;
-}
-
-table tr th, table tr td { 
-  background: blue;
-  color: #FFF;
-  padding: 7px 4px;
-  text-align: left;
-}
-  
-table tr td { 
-  background: #DDD;
-  color: #47433F;
-  border-top: 1px solid #FFF;
-}
 
 /* styling for the slideshow on the homepage */
 ul.slideshow {
