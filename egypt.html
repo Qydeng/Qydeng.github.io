@@ -50,62 +50,70 @@ a:active {color: green; text-decoration: none;}
        
                          }
 #workinside{ position:absolute;
-        top: 2750px;
+        top: 2800px;
         left:700px;
        z-index:4;
        
                          }
 
 
-#content{ position: absolute;
+.content{ position: absolute;
 	        top: 80px;
 	        left: 70px;
            background-color: #28f0f7ab;
           width: 1050px;
            height: 500px;
-        
-           border-color : yellow; 
-         border-left-style: solid;
-	border-right-style: solid;
-         z-index:0;
-         opacity:0.6;filter: alpha(opacity=60);
+         z-index:1;
+      font-size:20px;
+       color: yellow;
+         opacity:0.8;filter: alpha(opacity=80);
 
                             }
-#content1{ position: absolute;
+#text0{ position:absolute;
+       margin-left: 750px;
+        margin-top:30px;
+       z-index:3;
+    color: yellow;
+    font-size:25px;
+       }
+.content1{ position: absolute;
 	        top: 700px;
 	        left: 70px;
            background-color: #28f0f7ab;
           width: 1050px;
-           height: 2000px;
-        
-           border-color : yellow; 
-         border-left-style: solid;
-	border-right-style: solid;
+           height: 1900px;
          z-index:0;
-         opacity:0.6;filter: alpha(opacity=60);
+         opacity:0.8;filter: alpha(opacity=80);
 
                             }
+#text{ position:absolute;
+       margin-left: 750px;
+        margin-top:1400px;
+       z-index:3;
+    color: yellow;
+    font-size:23px;
+       }
 
-#content2{ position: absolute;
-	        top: 2900px;
+.content2{ position: absolute;
+	        top: 2750px;
 	        left: 70px;
            background-color: #28f0f7ab;
           width: 1050px;
            height: 1000px;
-        
-           border-color : yellow; 
-         border-left-style: solid;
-	border-right-style: solid;
+           
          z-index:0;
-         opacity:0.6;filter: alpha(opacity=60);
+         opacity:0.8;filter: alpha(opacity=80);
 
                             }
-
+.content2 p{font-size:25px;
+          color: yellow;
+          margin-left:60px;
+       
 
                             }
-#text{ position:absolute;
-        top: 100px;
-        left:100px;
+#text1{ position:absolute;
+        top: 900px;
+        right:300px;
        z-index:3;
     color: yellow;
        }
@@ -121,7 +129,7 @@ a:active {color: green; text-decoration: none;}
     font-size: 12px;
     position:fixed;
     top:400px;
-    left:1000px;
+    right:100px;
    cursor: pointer;
       z-index:3;
     }
@@ -135,7 +143,7 @@ a:active {color: green; text-decoration: none;}
     font-size: 12px;
     position:fixed;
     top:450px;
-    left:1000px;
+    right:100px;
    cursor: pointer;
       z-index:3;
     }
@@ -144,10 +152,11 @@ a:active {color: green; text-decoration: none;}
 
 </head>
 <body>
-<div id="content"></div> <div id="text"> The pyramid <br>It is composed of two photos original took by me <br>
-                and I modified them by Photohop</div>
-<div id="content1"></div>
-<div id="content2"></div>
+<div class="content"> <p><br>The Pyramid</p> 
+<div id="text0">  Back <br>to <br> Ancient <br> Egypt <br><br>What Could You See?</div>
+</div>
+<div class="content1"><div id="text"> The Lion People<br><br>A photo of my original sketching</div></div>
+<div class="content2"><p><br><br><br>What Is Inside The Pyramid ?</p></div>
 
 
 <div id="work"> <img src="images/pyramid.png"  alt="pyramid"  width="567" height="410"></div>

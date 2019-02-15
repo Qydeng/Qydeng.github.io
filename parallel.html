@@ -23,26 +23,19 @@ a:active {color: green; text-decoration: none;}
        z-index:4;
        
                          }
-#content{ position: absolute;
-	        top: 80px;
-	        left: 70px;
-           background-color: #5eb5fb;
-          width: 900px;
-           height: 450px;
-        
-           border-color : yellow; 
-         border-left-style: solid;
-	border-right-style: solid;
+.content{ position: absolute;
+	        top: 150px;
+	        left: 670px;
+           background-color: blue;
+          width: 350px;
+           height: 350px;
+        border-style:dashed;
          z-index:0;
          opacity:0.6;filter: alpha(opacity=60);
 
                             }
-#text{ position:absolute;
-        top: 100px;
-        left:500px;
-       z-index:3;
-    color: yellow;
-       }
+.content p{ font-size:24px;
+                   color:white;margin-left:5px; margin-top:5px; }
 
 
 #buttonext{ background-color:#40E0D0; 
@@ -78,8 +71,8 @@ a:active {color: green; text-decoration: none;}
 
 </head>
 <body>
-<div id="content"></div> <div id="text"> This picture describes the idea of Parallel world. <br>It is composed of two photos original took by me <br>
-                and I modified them by Photohop</div>
+<div class="content"><p> This image describes the idea of Parallel world. <br><br>It is composed of two photos took by me <br>
+                and I modified them by Photohop</p></div>
 
 <div id="work"> <img src="images/otherworld.png"  alt="otherworld"  width="300" height="350">
 </div>
