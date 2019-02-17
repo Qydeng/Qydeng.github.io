@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Flying_Mind</title>  
+ 
+<style>
+
+body{background-image:url(images/bg.png); 
+      background-size:100%;
+    
+                                    }
+
+a:link {color: blue; text-decoration: underline;}
+a:visited {color: yellow; text-decoration: none;}
+a:focus {color:white; text-decoration: none;}
+a:hover {color: black; text-decoration: none;}
+a:active {color: green; text-decoration: none;} 
+
+
+
+#buttonhome{ background-color:#40E0D0; 
+    
+    color: #00008B;
+     padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    position:absolute;
+    top:450px;
+    left:1000px;
+   cursor: pointer;
+      z-index:3;
+    }
+
+</style>
+
+</head>
+<body>
+<video width="620" height="500" controls>
+  <source src="explain.mp4" type="video/mp4">
+Your browser does not support the video tag.
+  </video>
+
+<button id="buttonhome" button onclick='window.location.replace("index.html")'>Back to Index</button>
+</body>
+</html>
